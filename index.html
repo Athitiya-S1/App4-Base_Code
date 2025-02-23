@@ -45,31 +45,31 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	var totalQuestions = 8;
 	//I had to add this variable in order to ensure that both of the percentages added to a 100//
-        var allergy_count = 0;
+        var hyperthyroidism_count = 0;
 	//var is used to declare variables, values, and what you want the variable to do//
-	//In this case is used to declare the value of allergy starts at 0//
-        var cold_count = 0;
+	//In this case is used to declare the value of hyperthyroidism starts at 0//
+        var hypothyroidism_count = 0;
 	//var is used to declare variables, values, and what you want the variable to do//
-	//In this case is used to declare the value of cold starts at 0//
+	//In this case is used to declare the value of hypothyroidism starts at 0//
 
 
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
-	//Increases the count for allergy//
+        function hyperthyroidismAdd(){
+            hyperthyroidism_count = hyperthyroidism_count + 1;
+	//Increases the count for hyperthyroidism//
         }
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
-	//Increases the count for cold//
+        function hypothyroidismAdd(){
+            hypothyroidism_count = hypothyroidism_count + 1;
+	//Increases the count for hypothyroidism//
         }
 
 	function getResult() {
 	//Dsiplays and calculates percentages//
-		var allergyPercent=(allergy_count/totalQuestions)*100;
-		//Divides allergy count by 8(number of question) and turns into percentage//
-		var coldPercent = (cold_count/totalQuestions)*100;
-		//Divides cold count by 8(number of question) and turns into percentage//
-		var totalPercent = allergyPercent + coldPercent;
+		var hyperthyroidismPercent=(hyperthyroidism_count/totalQuestions)*100;
+		//Divides hyperthyroidism count by 8(number of question) and turns into percentage//
+		var hypothyroidismPercent = (hypothyroidism_count/totalQuestions)*100;
+		//Divides hypothyroidism count by 8(number of question) and turns into percentage//
+		var totalPercent = hyperthyroidismPercent + hypothyroidismPercent;
 	
 		//I noticed that if you go to a previous question and answer the percentage exceed the 100 percent value. So I looked up how to fix this//
 		//Check if combined total is not equal to 100//
@@ -77,21 +77,21 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		//Functions to fix percentages if they do not equal 100//
         		var scale = 100 / totalPercent;
 			 //Scales both variables so they equal to 100//
-       			allergyPercent *= scale;
-			coldPercent *= scale;
+       			hyperthyroidismPercent *= scale;
+			hypothyroidismPercent *= scale;
 		}
 	
 	var resultText = document.getElementById("resultText");
 		//Function to display the results//
-		resultText.innerHTML = "Probability it is allergies = " + allergyPercent.toFixed(2) + "%<br> Probability it is a cold = " + coldPercent.toFixed(2) + "%";
+		resultText.innerHTML = "Probability it is hyperthyroidism = " + hyperthyroidismPercent.toFixed(2) + "%<br> Probability it is hypothyroidism = " + hypothyroidismPercent.toFixed(2) + "%";
 		//Added the percentage signs//
 		//Tells the system how to display results. Two decimal points enabled//
 
 	}
 	function restartTest(){
 	//Function to restart the test
- 		allergy_count = 0;
-		cold_count = 0;
+ 		hyperthyroidism_count = 0;
+		hypothyroidism_count = 0;
     		//Reset the counts of the variables//
     		location.href = "#content0";
 		//Send the person back to the first page//
@@ -128,14 +128,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <body>
 		<!--Div tags specify divisions in the body (big format changes and specific CSS commands at a specific division-->
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+	<h1>Hyperthyroidism or hypothyroidism?</h1>
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it may be allergies? Answer a few short questions to find out!</p>
+	<p>Are you experiencing symptoms of hyperthyroidism or hypothyroidism? Answer a few short questions to find out!</p>
 	
 	<!-- The person taking this quiz has definitely seen better days, otherwise... they wouldn't have taken this quiz in the first place. To make them feel better,
-I want to make the buttons rainbow themed! So that's what I'll change it to... ROYGBIV color alterations! Take that, leprechaun!-->
+I want to make the buttons rainbow themed! So that's what I'll change it to... ROYGBIV color alterations! Take that, green leprechaun!-->
 	
 
 	<a href="#one" class="w3-btn w3-red w3-round"> Get Started </a>
@@ -151,9 +151,9 @@ I want to make the buttons rainbow themed! So that's what I'll change it to... R
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your eyes watery or itchy?</p>    
-	<a href="#two" onclick="allergyAdd();" class="w3-btn w3-orange"> Yes</a>
-	<a href="#two" onclick="coldAdd();" class="w3-btn w3-yellow">No</a>
+        <p>Are you noticing thinning of your hair and nails?</p>    
+	<a href="#two" onclick="hyperthyroidismAdd();" class="w3-btn w3-orange"> Yes</a>
+	<a href="#two" onclick="hypothyroidismAdd();" class="w3-btn w3-yellow">No</a>
 
     	</div>
 
