@@ -132,7 +132,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you experiencing symptoms of hyperthyroidism or hypothyroidism? Answer a few short questions to find out!</p>
+	<p>Are you experiencing hyperthyroidism OR hypothyroidism? Answer a few short questions to find out!</p>
 	
 	<!-- The person taking this quiz has definitely seen better days, otherwise... they wouldn't have taken this quiz in the first place. To make them feel better,
 I want to make the buttons rainbow themed! So that's what I'll change it to... ROYGBIV color alterations! Take that, green leprechaun!-->
@@ -165,9 +165,9 @@ I want to make the buttons rainbow themed! So that's what I'll change it to... R
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do you have a fever?</p>
-	<a href="#three" onclick="coldAdd();" class="w3-btn w3-green"> Yes</a>
-	<a href="#three" onclick="allergyAdd();" class="w3-btn w3-blue">No</a>
+		<p>Are you experiencing frequent bowel movements or diarrhea?</p>
+	<a href="#three" onclick="hyperthyroidismAdd();" class="w3-btn w3-green"> Yes</a>
+	<a href="#three" onclick="hypothyroidismAdd();" class="w3-btn w3-blue">No</a>
 
 	</div>
 		<!--This is page three-->
@@ -177,9 +177,9 @@ I want to make the buttons rainbow themed! So that's what I'll change it to... R
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Do you have a sore throat?</p>    
-	<a href="#four" onclick="coldAdd();" class="w3-btn w3-purple"> Yes</a>
-	<a href="#four" onclick="allergyAdd();" class="w3-btn w3-red">No</a>
+        <p>Are you experiencing anxiety, nervousness, or irritability?</p>    
+	<a href="#four" onclick="hyperthyroidismAdd();" class="w3-btn w3-purple"> Yes</a>
+	<a href="#four" onclick="hypothyroidismAdd();" class="w3-btn w3-red">No</a>
 
 </div>	
 	<!--This is page four-->
@@ -190,9 +190,9 @@ I want to make the buttons rainbow themed! So that's what I'll change it to... R
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your symptoms seasonal or chronic?</p>  
-	<a href="#five" onclick="allergyAdd();" class="w3-btn w3-orange"> Yes</a>
-	<a href="#five" onclick="coldAdd();" class="w3-btn w3-yellow">No</a>
+        <p>Are you experiencing fatigue, lethargy, and depression?</p>  
+	<a href="#five" onclick="hypothyroidismAdd();" class="w3-btn w3-orange"> Yes</a>
+	<a href="#five" onclick="hyperthyroidismAdd();" class="w3-btn w3-yellow">No</a>
  </div>
 	<!--This is page five-->
 		<div class="page" id="five">
@@ -202,9 +202,9 @@ I want to make the buttons rainbow themed! So that's what I'll change it to... R
 
     	<div id="content" class="w3-container">
 			</div>
-        <p>Are you experiencing thick and green colored mucus?</p>    
-	<a href="#six" onclick="coldAdd();" class="w3-btn w3-green"> Yes</a>
-	<a href="#six" onclick="allergyAdd();" class="w3-btn w3-blue">No</a>
+        <p>Have you been experiencing constipation when using the restroom?</p>    
+	<a href="#six" onclick="hypothyroidismAdd();" class="w3-btn w3-green"> Yes</a>
+	<a href="#six" onclick="hyperthyroidismAdd();" class="w3-btn w3-blue">No</a>
 	</div>
 	
 <!--This is page six-->
@@ -215,9 +215,9 @@ I want to make the buttons rainbow themed! So that's what I'll change it to... R
 	
 	<div id="content" class="w3-container">
 					</div>
-		<p>Do your symptoms worsen when staying outside for a long period of time?</p>
-		<a href="#seven" onclick="allergyAdd();" class="w3-btn w3-purple"> Yes</a>
-		<a href="#seven" onclick="coldAdd();" class="w3-btn w3-pink"> No</a>		
+		<p>Are you experiencing thickening of the skin and hair?</p>
+		<a href="#seven" onclick="hypothyroidismAdd();" class="w3-btn w3-purple"> Yes</a>
+		<a href="#seven" onclick="hyperthyroidismAdd();" class="w3-btn w3-pink"> No</a>		
 		 </div><!-- /content -->
 
 		
@@ -228,9 +228,9 @@ I want to make the buttons rainbow themed! So that's what I'll change it to... R
 
     	<div id="content" class="w3-container">
 			</div>		
-        <p>Are you experiencing pressure in your head and ears?</p>    
-	<a href="#eight" onclick="coldAdd();" class="w3-btn w3-red"> Yes</a>
-	<a href="#eight" onclick="allergyAdd();" class="w3-btn w3-orange">No</a>
+        <p>Do you experience cold intolerance and dry skin?</p>    
+	<a href="#eight" onclick="hypothyroidismAdd();" class="w3-btn w3-red"> Yes</a>
+	<a href="#eight" onclick="hyperthyroidismAdd();" class="w3-btn w3-orange">No</a>
 
 	</div>
 	
@@ -245,10 +245,10 @@ I want to make the buttons rainbow themed! So that's what I'll change it to... R
 
     	<div id="content" class="w3-container">
 			</div>
-        <p>Have you been around someone who is sick recently?</p>    
+        <p>Are you experiencing heat intolerance and excessive sweating?</p>    
 	
-	<a href="#results" onclick="coldAdd();" class="w3-btn w3-yellow"> Yes</a>
-	<a href="#results" onclick="allergyAdd();" class="w3-btn w3-green">No</a>
+	<a href="#results" onclick="hyperthyroidismAdd();" class="w3-btn w3-yellow"> Yes</a>
+	<a href="#results" onclick="hypothyroidismAdd();" class="w3-btn w3-green">No</a>
 
 </div>
 		 </div><!-- /content -->
@@ -263,7 +263,7 @@ I want to make the buttons rainbow themed! So that's what I'll change it to... R
 	Results will be displayed and computed after hitting the "See Results" button on page-->
 	
 	<div id="content" class="w3-container">
-			<p>Click the button below to find out if you have cold or allergies!</p>
+			<p>Click the button below to find out if you are experiencing hyperthyroidism or hypothyroidism! I hope you feel better soon, and be sure to consult with your physician to screen for underlying thyroid problems!</p>
 		</div>
 	<div id="resultContainer" class="w3-container">
 		<button onclick="getResult();" class="w3-button w3-white w3-round w3-hover-green"><b>Results</b></button>
