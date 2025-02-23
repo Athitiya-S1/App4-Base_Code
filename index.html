@@ -44,57 +44,57 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
 
 	var totalQuestions = 8;
-	//I had to add this variable in order to ensure that both of the percentages added to a 100//
+//I had to add this variable in order to ensure that both of the percentages added to a 100//
         var hyperthyroidism_count = 0;
-	//var is used to declare variables, values, and what you want the variable to do//
-	//In this case is used to declare the value of hyperthyroidism starts at 0//
+//var is used to declare variables, values, and what you want the variable to do//
+//In this case is used to declare the value of hyperthyroidism starts at 0//
         var hypothyroidism_count = 0;
-	//var is used to declare variables, values, and what you want the variable to do//
-	//In this case is used to declare the value of hypothyroidism starts at 0//
+//var is used to declare variables, values, and what you want the variable to do//
+//In this case is used to declare the value of hypothyroidism starts at 0//
 
 
         function hyperthyroidismAdd(){
             hyperthyroidism_count = hyperthyroidism_count + 1;
-	//Increases the count for hyperthyroidism//
+//Increases the count for hyperthyroidism//
         }
 
         function hypothyroidismAdd(){
             hypothyroidism_count = hypothyroidism_count + 1;
-	//Increases the count for hypothyroidism//
+//Increases the count for hypothyroidism//
         }
 
 	function getResult() {
-	//Dsiplays and calculates percentages//
+//Dsiplays and calculates percentages//
 		var hyperthyroidismPercent=(hyperthyroidism_count/totalQuestions)*100;
-		//Divides hyperthyroidism count by 8(number of question) and turns into percentage//
+	//Divides hyperthyroidism count by 8(number of question) and turns into percentage//
 		var hypothyroidismPercent = (hypothyroidism_count/totalQuestions)*100;
-		//Divides hypothyroidism count by 8(number of question) and turns into percentage//
+	//Divides hypothyroidism count by 8(number of question) and turns into percentage//
 		var totalPercent = hyperthyroidismPercent + hypothyroidismPercent;
 	
-		//I noticed that if you go to a previous question and answer the percentage exceed the 100 percent value. So I looked up how to fix this//
-		//Check if combined total is not equal to 100//
+	//I noticed that if you go to a previous question and answer the percentage exceed the 100 percent value. So I looked up how to fix this//
+	//Check if combined total is not equal to 100//
     		 if (totalPercent !== 100) {
-		//Functions to fix percentages if they do not equal 100//
+	//Functions to fix percentages if they do not equal 100//
         		var scale = 100 / totalPercent;
-			 //Scales both variables so they equal to 100//
+	//Scales both variables so they equal to 100//
        			hyperthyroidismPercent *= scale;
 			hypothyroidismPercent *= scale;
 		}
 	
 	var resultText = document.getElementById("resultText");
-		//Function to display the results//
+	//Function to display the results//
 		resultText.innerHTML = "Probability it is hyperthyroidism = " + hyperthyroidismPercent.toFixed(2) + "%<br> Probability it is hypothyroidism = " + hypothyroidismPercent.toFixed(2) + "%";
-		//Added the percentage signs//
-		//Tells the system how to display results. Two decimal points enabled//
+	//Added the percentage signs//
+	//Tells the system how to display results. Two decimal points enabled//
 
 	}
 	function restartTest(){
 	//Function to restart the test
  		hyperthyroidism_count = 0;
 		hypothyroidism_count = 0;
-    		//Reset the counts of the variables//
+    	//Reset the counts of the variables//
     		location.href = "#content0";
-		//Send the person back to the first page//
+	//Send the person back to the first page//
 	}
 
 
@@ -126,15 +126,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </style>
 
 <body>
-		<!--Div tags specify divisions in the body (big format changes and specific CSS commands at a specific division-->
-<div id="header" class="w3-container w3-flat-carrot">
+<!--Div tags specify divisions in the body (big format changes and specific CSS commands at a specific division-->
+	<div id="header" class="w3-container w3-flat-carrot">
 	<h1>Hyperthyroidism or hypothyroidism?</h1>
 </div>
 	
-<div id="content" class="w3-container">
+	<div id="content" class="w3-container">
 	<p>Are you experiencing hyperthyroidism OR hypothyroidism? Answer a few short questions to find out!</p>
 	
-	<!-- The person taking this quiz has definitely seen better days, otherwise... they wouldn't have taken this quiz in the first place. To make them feel better,
+<!-- The person taking this quiz has definitely seen better days, otherwise... they wouldn't have taken this quiz in the first place. To make them feel better,
 I want to make the buttons rainbow themed! So that's what I'll change it to... ROYGBIV color alterations! Take that, green leprechaun!-->
 	
 
@@ -144,8 +144,8 @@ I want to make the buttons rainbow themed! So that's what I'll change it to... R
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-	<!--This is page one-->
-<div class="page" id="one">
+<!--This is page one-->
+	<div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
 	</div>
@@ -158,8 +158,8 @@ I want to make the buttons rainbow themed! So that's what I'll change it to... R
     	</div>
 
 </div>
-	<!--This is page two-->
-<div class="page" id="two">
+<!--This is page two-->
+	<div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
 	</div>
@@ -170,8 +170,8 @@ I want to make the buttons rainbow themed! So that's what I'll change it to... R
 	<a href="#three" onclick="hypothyroidismAdd();" class="w3-btn w3-blue">No</a>
 
 	</div>
-		<!--This is page three-->
-<div class="page" id="three">
+<!--This is page three-->
+	<div class="page" id="three">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
 	</div>
@@ -182,9 +182,9 @@ I want to make the buttons rainbow themed! So that's what I'll change it to... R
 	<a href="#four" onclick="hypothyroidismAdd();" class="w3-btn w3-red">No</a>
 
 </div>	
-	<!--This is page four-->
+<!--This is page four-->
 
-<div class="page" id="four">
+	<div class="page" id="four">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
 	</div>
@@ -194,9 +194,9 @@ I want to make the buttons rainbow themed! So that's what I'll change it to... R
 	<a href="#five" onclick="hypothyroidismAdd();" class="w3-btn w3-orange"> Yes</a>
 	<a href="#five" onclick="hyperthyroidismAdd();" class="w3-btn w3-yellow">No</a>
  </div>
-	<!--This is page five-->
+<!--This is page five-->
 		<div class="page" id="five">
-	<div id="header" class="w3-container w3-flat-carrot">
+		<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 5</h1>
 		</div>
 
@@ -208,12 +208,12 @@ I want to make the buttons rainbow themed! So that's what I'll change it to... R
 	</div>
 	
 <!--This is page six-->
-			<div class="page" id="six">
-	<div id="header" class="w3-container w3-flat-carrot">
+		<div class="page" id="six">
+		<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 6</h1>	
-	</div>
+		</div>
 	
-	<div id="content" class="w3-container">
+		<div id="content" class="w3-container">
 					</div>
 		<p>Are you experiencing thickening of the skin and hair?</p>
 		<a href="#seven" onclick="hypothyroidismAdd();" class="w3-btn w3-purple"> Yes</a>
@@ -234,7 +234,7 @@ I want to make the buttons rainbow themed! So that's what I'll change it to... R
 
 	</div>
 	
-	<!--I am adding one last question, which I arguably think is one of the most important ones!-->
+<!--I am adding one last question, which I arguably think is one of the most important ones!-->
 </div>
 		 </div>
 	
@@ -251,16 +251,15 @@ I want to make the buttons rainbow themed! So that's what I'll change it to... R
 	<a href="#results" onclick="hypothyroidismAdd();" class="w3-btn w3-green">No</a>
 
 </div>
-		 </div><!-- /content -->
+		 </div>
 
-
-<div class="page" id="results">
+	<div class="page" id="results">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
 
-	<!--Page eight is for displaying results
-	Results will be displayed and computed after hitting the "See Results" button on page-->
+<!--Page eight is for displaying results
+Results will be displayed and computed after hitting the "See Results" button on page-->
 	
 	<div id="content" class="w3-container">
 			<p>Click the button below to find out if you are experiencing hyperthyroidism or hypothyroidism! I hope you feel better soon, and be sure to consult with your physician to screen for underlying thyroid problems!</p>
@@ -276,9 +275,9 @@ I want to make the buttons rainbow themed! So that's what I'll change it to... R
 
 
 
-<footer class="w3-bottom w3-container w3-flat-carrot">
+	<footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>I love DIY!</p>
-</footer>
+	</footer>
 
 
 	
